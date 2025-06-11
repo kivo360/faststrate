@@ -16,15 +16,14 @@ dependencies = [
   {%- if cookiecutter.with_fastapi_api|int %}
   "fastapi[all] (>=0.115.6)",
   "gunicorn (>=23.0.0)",
+  "pydantic-settings (>=2.6.1)",
+  "uvicorn[standard] (>=0.34.0)",
   {%- endif %}
   {%- if cookiecutter.project_type == "app" %}
   "poethepoet (>=0.32.1)",
   {%- endif %}
   {%- if cookiecutter.with_typer_cli|int %}
   "typer[all] (>=0.15.1)",
-  {%- endif %}
-  {%- if cookiecutter.with_fastapi_api|int %}
-  "uvicorn[standard] (>=0.34.0)",
   {%- endif %}
 ]
 {%- if cookiecutter.with_typer_cli|int %}
