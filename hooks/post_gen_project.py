@@ -29,8 +29,8 @@ if not with_typer_cli:
 if not with_rust_extensions:
     if os.path.exists("Cargo.toml"):
         os.remove("Cargo.toml")
-    if os.path.exists("src_rust"):
-        shutil.rmtree("src_rust")
+    if os.path.exists("src/lib.rs"):
+        os.remove("src/lib.rs")
 
 # Remove the continuous integration provider that is not selected.
 if continuous_integration != "GitHub":
