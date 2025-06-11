@@ -6,7 +6,7 @@ edition = "2021"
 [lib]
 name = "{{ cookiecutter.__project_name_snake_case }}_rust"
 crate-type = ["cdylib"]
-path = "rust_src/lib.rs"
+path = "src_rust/lib.rs"
 
 [dependencies]
 pyo3 = { version = "0.22.6", features = ["extension-module"] }

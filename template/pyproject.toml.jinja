@@ -1,7 +1,7 @@
 [build-system]  # https://docs.astral.sh/uv/concepts/projects/config/#build-systems
 {%- if with_rust_extensions %}
-requires = ["scikit-build-core>=0.10.7", "pybind11>=2.13.6"]
-build-backend = "scikit_build_core.build"
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
 {%- else %}
 requires = ["hatchling>=1.27.0"]
 build-backend = "hatchling.build"
@@ -28,18 +28,7 @@ dependencies = [
   {%- if with_typer_cli %}
   "typer (>=0.15.1)",
   {%- endif %}
-  {%- if with_rust_extensions %}
-  "pybind11 (>=2.13.6)",
-  {%- endif %}
 ]
-{%- if with_rust_extensions %}
-
-[tool.scikit-build]  # https://scikit-build-core.readthedocs.io/en/latest/configuration.html
-wheel.expand-macos-universal-tags = true
-
-[tool.scikit-build.cmake.define]
-PYBIND11_FINDPYTHON = "ON"
-{%- endif %}
 {%- if with_typer_cli %}
 
 [project.scripts]  # https://docs.astral.sh/uv/concepts/projects/config/#command-line-interfaces
