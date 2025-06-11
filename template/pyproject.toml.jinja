@@ -1,6 +1,11 @@
 [build-system]  # https://docs.astral.sh/uv/concepts/projects/config/#build-systems
+{%- if with_rust_extensions %}
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+{%- else %}
 requires = ["hatchling>=1.27.0"]
 build-backend = "hatchling.build"
+{%- endif %}
 
 [project]  # https://packaging.python.org/en/latest/specifications/pyproject-toml/
 name = "{{ project_name_kebab_case }}"

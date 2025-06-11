@@ -1,0 +1,15 @@
+[package]
+name = "{{ cookiecutter.__project_name_snake_case }}"
+version = "0.0.0"
+edition = "2021"
+
+[lib]
+name = "{{ cookiecutter.__project_name_snake_case }}_rust"
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+[dependencies]
+pyo3 = { version = "0.22.6", features = ["extension-module"] }
+
+[dependencies.pyo3-build-config]
+version = "0.22.6"

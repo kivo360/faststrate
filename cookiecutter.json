@@ -16,6 +16,7 @@
   "with_conventional_commits": "{% if cookiecutter.development_environment == 'simple' %}0{% else %}1{% endif %}",
   "with_fastapi_api": "0",
   "with_typer_cli": "0",
+  "with_rust_extensions": "0",
   "continuous_integration": [
     "GitHub",
     "GitLab"
