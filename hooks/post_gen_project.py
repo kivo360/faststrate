@@ -6,6 +6,7 @@ project_name = "{{ cookiecutter.__project_name_snake_case }}"
 development_environment = "{{ cookiecutter.development_environment }}"
 with_fastapi_api = int("{{ cookiecutter.with_fastapi_api }}")
 with_typer_cli = int("{{ cookiecutter.with_typer_cli }}")
+with_rust_extensions = int("{{ cookiecutter.with_rust_extensions }}")
 continuous_integration = "{{ cookiecutter.continuous_integration }}"
 is_application = "{{ cookiecutter.project_type == 'app' }}" == "True"
 
@@ -23,6 +24,15 @@ if not with_fastapi_api:
 if not with_typer_cli:
     os.remove(f"src/{project_name}/cli.py")
     os.remove("tests/test_cli.py")
+
+# Remove Rust files if not selected.
+if not with_rust_extensions:
+    if os.path.exists("Cargo.toml"):
+        os.remove("Cargo.toml")
+    if os.path.exists("CMakeLists.txt"):
+        os.remove("CMakeLists.txt")
+    if os.path.exists("rust_src"):
+        shutil.rmtree("rust_src")
 
 # Remove the continuous integration provider that is not selected.
 if continuous_integration != "GitHub":

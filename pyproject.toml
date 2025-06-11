@@ -6,9 +6,11 @@ dependencies = [
     "commitizen>=4.3.0",
     "copier>=9.4.1",
     "fastapi>=0.115.6",
-    "pydantic-settings>=2.6.1",
+    "pybind11>=2.13.6",
     "pre-commit>=4.1.0",
+    "pydantic-settings>=2.6.1",
     "ruff>=0.9.3",
+    "scikit-build-core>=0.10.7",
     "typer>=0.15.1",
 ]
 
