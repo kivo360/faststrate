@@ -26,11 +26,7 @@ if not with_typer_cli:
     os.remove("tests/test_cli.py")
 
 # Remove Rust files if not selected.
-if not with_rust_extensions:
-    if os.path.exists("Cargo.toml"):
-        os.remove("Cargo.toml")
-    if os.path.exists("src/lib.rs"):
-        os.remove("src/lib.rs")
+# Note: Rust files are now conditional in cookiecutter, so they won't exist if not selected
 
 # Remove the continuous integration provider that is not selected.
 if continuous_integration != "GitHub":
