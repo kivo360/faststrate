@@ -1,6 +1,6 @@
-[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE3IDE2VjdsLTYgNU0yIDlWOGwxLTFoMWw0IDMgOC04aDFsNCAyIDEgMXYxNGwtMSAxLTQgMmgtMWwtOC04LTQgM0gzbC0xLTF2LTFsMy0zIi8+PC9zdmc+)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/superlinear-ai/substrate) [![Open in GitHub Codespaces](https://img.shields.io/static/v1?label=GitHub%20Codespaces&message=Open&color=blue&logo=github)](https://github.com/codespaces/new/superlinear-ai/substrate) [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-black.json)](https://github.com/copier-org/copier)
+[![Open in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE3IDE2VjdsLTYgNU0yIDlWOGwxLTFoMWw0IDMgOC04aDFsNCAyIDEgMXYxNGwtMSAxLTQgMmgtMWwtOC04LTQgM0gzbC0xLTF2LTFsMy0zIi8+PC9zdmc+)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/superlinear-ai/faststrate) [![Open in GitHub Codespaces](https://img.shields.io/static/v1?label=GitHub%20Codespaces&message=Open&color=blue&logo=github)](https://github.com/codespaces/new/superlinear-ai/faststrate) [![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-black.json)](https://github.com/copier-org/copier)
 
-# 🌱 Substrate
+# 🌱 faststrate
 
 A modern [Copier template](https://github.com/copier-org/copier) for scaffolding Python packages and apps.
 
@@ -33,7 +33,7 @@ A modern [Copier template](https://github.com/copier-org/copier) for scaffolding
 To create a new Python project with this template, run:
 
 ```sh
-uvx copier copy gh:superlinear-ai/substrate path/to/local/repository
+uvx copier copy gh:superlinear-ai/faststrate path/to/local/repository
 ```
 
 ### Update your Python project
@@ -71,7 +71,7 @@ To migrate a project from Cookiecutter to Copier, follow these steps:
     rm -f .cruft.json poetry.lock
     
     # Rescaffold the project without changing src/ and tests/
-    uvx copier copy --overwrite --exclude src/ --exclude tests/ gh:superlinear-ai/substrate .
+    uvx copier copy --overwrite --exclude src/ --exclude tests/ gh:superlinear-ai/faststrate .
     ```
 
 2. Review the changes to `pyproject.toml` and reinsert your project's dependencies.
@@ -121,8 +121,8 @@ To migrate a project from Cookiecutter to Copier, follow these steps:
 
 The following development environments are supported:
 
-1. ⭐️ _GitHub Codespaces_: click on [Open in GitHub Codespaces](https://github.com/codespaces/new/superlinear-ai/substrate) to start developing in your browser.
-2. ⭐️ _VS Code Dev Container (with container volume)_: click on [Open in Dev Containers](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/superlinear-ai/substrate) to clone this repository in a container volume and create a Dev Container with VS Code.
+1. ⭐️ _GitHub Codespaces_: click on [Open in GitHub Codespaces](https://github.com/codespaces/new/superlinear-ai/faststrate) to start developing in your browser.
+2. ⭐️ _VS Code Dev Container (with container volume)_: click on [Open in Dev Containers](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/superlinear-ai/faststrate) to clone this repository in a container volume and create a Dev Container with VS Code.
 3. ⭐️ _uv_: clone this repository and run the following from root of the repository:
 
     ```sh
@@ -145,6 +145,6 @@ The following development environments are supported:
 <summary>Developing</summary>
 
 - This project follows the [Conventional Commits](https://www.conventionalcommits.org/) standard to automate [Semantic Versioning](https://semver.org/) and [Keep A Changelog](https://keepachangelog.com/) with [Commitizen](https://github.com/commitizen-tools/commitizen).
-- Run `cz bump` to bump Substrate's version, update the `CHANGELOG.md`, and create a git tag. Then push the changes and the git tag with `git push origin main --tags`.
+- Run `cz bump` to bump faststrate's version, update the `CHANGELOG.md`, and create a git tag. Then push the changes and the git tag with `git push origin main --tags`.
 
 </details>
