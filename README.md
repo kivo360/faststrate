@@ -33,7 +33,7 @@ A modern [Copier template](https://github.com/copier-org/copier) for scaffolding
 To create a new Python project with this template, run:
 
 ```sh
-uvx copier copy gh:superlinear-ai/faststrate path/to/local/repository
+uvx copier copy gh:kivo360/faststrate path/to/local/repository
 ```
 
 ### Update your Python project
