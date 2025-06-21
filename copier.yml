@@ -91,6 +91,11 @@ with_typer_cli:
   help: Does your {{ project_type }} need a Typer CLI?
   default: false
 
+with_rust_extensions:
+  type: bool
+  help: Does your {{ project_type }} need Rust extensions for performance?
+  default: false
+
 project_name_kebab_case:
   when: false
   default: "{{ project_name | lower | replace(' ', '-') }}"

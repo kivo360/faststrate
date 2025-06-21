@@ -1,6 +1,11 @@
 [build-system]  # https://python-poetry.org/docs/pyproject/#poetry-and-pep-517
+{%- if cookiecutter.with_rust_extensions|int %}
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
+{%- else %}
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+{%- endif %}
 
 [project]  # https://packaging.python.org/en/latest/specifications/pyproject-toml/
 name = "{{ cookiecutter.__project_name_kebab_case }}"
@@ -16,15 +21,14 @@ dependencies = [
   {%- if cookiecutter.with_fastapi_api|int %}
   "fastapi[all] (>=0.115.6)",
   "gunicorn (>=23.0.0)",
+  "pydantic-settings (>=2.6.1)",
+  "uvicorn[standard] (>=0.34.0)",
   {%- endif %}
   {%- if cookiecutter.project_type == "app" %}
   "poethepoet (>=0.32.1)",
   {%- endif %}
   {%- if cookiecutter.with_typer_cli|int %}
   "typer[all] (>=0.15.1)",
-  {%- endif %}
-  {%- if cookiecutter.with_fastapi_api|int %}
-  "uvicorn[standard] (>=0.34.0)",
   {%- endif %}
 ]
 {%- if cookiecutter.with_typer_cli|int %}
